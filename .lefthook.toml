@@ -1,0 +1,8 @@
+[pre-commit.commands.eslint]
+root = "."
+glob = "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx}"
+run = "pnpm eslint --fix {staged_files}"
+
+[pre-commit.commands.biome]
+glob = "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx,json,jsonc}"
+run = "pnpm biome check {staged_files} --write"
